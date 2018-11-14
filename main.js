@@ -1,7 +1,10 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow, protocol } = require('electron')
-const path = require('path')
 
+/**
+ * A hack from https://github.com/electron/electron/issues/12011#issuecomment-369705509
+ * to add mime-type for resources and avoid warning because of "file://" protocol
+ */
 
 // Base path used to resolve modules
 const base = app.getAppPath();
@@ -26,9 +29,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({width: 1960, height: 1024})
   mainWindow.webContents.openDevTools()
   // and load the index.html of the app.
-  //mainWindow.loadFile('index.html')
-  mainWindow.loadURL(path.join('file://', __dirname, '/build/default/index.html'))
-  //mainWindow.loadURL(path.join('file://', __dirname, '/build/es5-bundled/index.html'))
+  mainWindow.loadFile('build/es6-bundled/index.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

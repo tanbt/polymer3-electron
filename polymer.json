@@ -5,18 +5,17 @@
       "polymer-3"
     ]
   },
-  "extraDependencies": [
-    "manifest.json"
-  ],
+  "sources": [
+    "src/**.js",
+    "manifest/**",
+    "package.json",
+    ".npmrc"
+   ],
   "builds": [
     {
-      "name": "default",
-      "bundle": true
-    },
-    {
-      "name": "es5-bundled",
+      "name": "es6-bundled",
       "js": {
-        "compile": "es5",
+        "compile": "es2015",
         "minify": false,
         "transformModulesToAmd": true
       },
