@@ -1,0 +1,34 @@
+{
+  "npm": true,
+  "lint": {
+    "rules": [
+      "polymer-3"
+    ]
+  },
+  "extraDependencies": [
+    "manifest.json"
+  ],
+  "builds": [
+    {
+      "name": "default",
+      "bundle": true
+    },
+    {
+      "name": "es5-bundled",
+      "js": {
+        "compile": "es5",
+        "minify": false,
+        "transformModulesToAmd": true
+      },
+      "css": {
+        "minify": false
+      },
+      "html": {
+        "minify": false
+      },
+      "bundle": true,
+      "addServiceWorker": true
+    }
+  ],
+  "moduleResolution": "node"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "p3-electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "@polymer/polymer": "^3.1.0",
+    "polymer": "^0.5.0"
+  },
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "electron": "^3.0.9",
+    "wct-browser-legacy": "^1.0.0"
+  }
+}
