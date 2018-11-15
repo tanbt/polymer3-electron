@@ -7,9 +7,7 @@
   },
   "sources": [
     "src/**.js",
-    "manifest/**",
-    "package.json",
-    ".npmrc"
+    "manifest/**"
    ],
   "builds": [
     {
@@ -25,7 +23,7 @@
       "html": {
         "minify": false
       },
-      "bundle": true,
+      "bundle": false,
       "addServiceWorker": true
     }
   ],

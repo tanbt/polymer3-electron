@@ -4,8 +4,6 @@
   "sources": [
     "src/**.js",
     "manifest/**",
-    "package.json",
-    ".npmrc",
     "index.html"
   ],
   "extraDependencies": [
@@ -25,7 +23,7 @@
       "html": {
         "minify": false
       },
-      "bundle": true,
+      "bundle": false,
       "addServiceWorker": true
     }
   ],

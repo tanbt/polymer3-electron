@@ -1,25 +1,6 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow, protocol } = require('electron')
 
-/**
- * A hack from https://github.com/electron/electron/issues/12011#issuecomment-369705509
- * to add mime-type for resources and avoid warning because of "file://" protocol
- */
-
-// Base path used to resolve modules
-const base = app.getAppPath();
-// Protocol will be "app://./…"
-const scheme = 'app';
-{ /* Protocol */
-  // Registering must be done before app::ready fires
-  // (Optional) Technically not a standard scheme but works as needed
-  protocol.registerStandardSchemes([scheme], { secure: true });
-
-  // Create protocol
-  require('./util/create-protocol')(scheme, base);
-}
-
-
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
